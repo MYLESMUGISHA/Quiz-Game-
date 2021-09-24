@@ -1,0 +1,171 @@
+/* Write your CSS Here. */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: Gotham rounded;
+}
+
+:root {
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+}
+
+body {
+    --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 80vw;
+    height: 50vw;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(var(--hue), 100%, 20%);
+}
+
+body.correct {
+    --hue: var(--hue-correct);
+}
+
+body.wrong {
+    --hue: var(--hue-wrong);
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.btn {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #fff;
+    outline: none;
+}
+
+.btn:hover {
+    border-color: #0000;
+}
+
+.btn.correct {
+    --hue: var(--hue-correct);
+}
+
+.btn.wrong {
+    --hue: var(--hue-wrong);
+}
+
+#start-btn
+ {
+    font-size: 1.4rem;
+    color: hsl(var(--hue), 100%, 20%);
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 2px;
+    background-color: #2083F8;
+    margin: 5px;
+    margin-bottom: 30px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    box-shadow: 3px;
+}
+
+
+/* .hide{
+    display: none;
+} */
+
+#answer {
+    height: 5vh;
+    width: 40%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#submit {
+    background-color: #f5DE0D;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+#game-form {
+    display: flex;
+}
+
+#score {
+    color: #19d95e;
+    font-size: 7rem;
+    margin-top: 20px;
+    border-width: 5px;
+}
+
+#emptyAnswer {
+    font-size: 1.5rem;
+    color: crimson;
+}
+
+#wel-mes  {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-left: 120px;
+
+}
+
+@media only screen and (max-width: 400px){
+
+    .container {
+        margin-top:340px;
+        margin-left: 60px;
+        margin-bottom:-60px ;
+    }
+     #start-btn{
+    
+    margin-bottom: 30px;
+   
+}
+#answer{
+    width: 20%;
+    max-width: 20px;
+}
+#submit{
+    margin-left:5px;
+}
+#wel-mes  {
+    text-align: center;
+    margin-left: 20px;
+
+}
+.container {
+    width: 800px;
+    max-width: 100%;
+    border-radius: 5px;
+    background-color: #fff;
+    /* padding: 10px;
+    box-shadow: 0 0 10px 2px; */
+}
+
+
+}
